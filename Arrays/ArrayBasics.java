@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 
 
@@ -27,15 +26,16 @@ public class ArrayBasics {
 
 
     public static int LargestNum (int array[]) {
-        int num = 0;
+        int largestnum = Integer.MAX_VALUE;
+        int smallestnum = Integer.MIN_VALUE; //no use here but for understanding.
         for (int i = 0; i < array.length; i++) {
-            if(array[i]>num) {
-                num=array[i];
+            if(array[i]>largestnum) {
+                largestnum=array[i];
             }
             
             
         }
-        return num;
+        return largestnum;
     }
 
 
