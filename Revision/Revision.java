@@ -57,6 +57,34 @@ public class Revision {
 
 
 
+    public static void PrintSubArray(int arr[]) {
+        int minValue = Integer.MAX_VALUE;
+        int maxValue = Integer.MIN_VALUE;
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                int sum = 0;
+                for (int j2 = i; j2 <= j; j2++) {
+                    System.out.print(arr[j2]+" ");
+                    sum = sum+arr[j2];
+                }
+                 if(sum>=maxValue) {
+                        maxValue=sum;
+                    }
+                    if(sum<minValue){
+                        minValue=sum;
+                    }
+                System.out.println("  : sum ="+sum);
+                System.out.println();
+                
+                
+            }
+            System.out.println();
+            System.out.println("The Largest sum is :" +maxValue);
+            System.out.println("The smallest sum is : " + minValue);
+            
+        }
+    }
 
 
 
@@ -75,20 +103,22 @@ public class Revision {
     }
 
 
+
+
+
     
-
-
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] arr =ArrayCretion(sc);
-        Arrays.sort(arr);
+        //Arrays.sort(arr);
         PrintArray(arr);
         
         int result = BinarySearch(arr,sc);
         System.out.println(result);
         PairsInArray(arr);
+        PrintSubArray(arr);
 
         
 
