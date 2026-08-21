@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class TwiceInAnArray {
+    //This problem is for returning true or false if there is the presence of a number twice in an array or totally unique respectively.
 
     public static boolean  istwice (int arr[] ) {
         for (int i = 0; i < arr.length; i++) {
