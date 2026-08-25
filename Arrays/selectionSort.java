@@ -1,7 +1,6 @@
 public class selectionSort {
     public static void main(String[] args) {
     int arr[] = {5,4,1,3,2};
-    int MinElement = Integer.MAX_VALUE;
     
     //outerloop=Turns/Paases
     for (int i = 0; i < arr.length-1; i++) {
