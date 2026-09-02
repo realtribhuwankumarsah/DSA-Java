@@ -103,7 +103,7 @@ public class sorting {
             
         }
         int j =0;
-        for (int i = 0; i < count.length; i++) {
+        for (int i = 0; i < count.length; i++) {  /*for descending order-------for(inti=count.length-1;i>=0;i--)       {while(count[i] >0) {     arr[j] =i;   j++;   count[i]--; }*/
             while(count[i]>0) {
                 arr[j]=i;
                 j++;
