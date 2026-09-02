@@ -312,7 +312,27 @@ public class starsPattern {
 
 
 
+   public static void hollowDiamond(int n) {
 
+    //upper part
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j<=n-i ; j++) {
+            System.out.print(" ");
+            
+        }
+        for (int j = 1; j < 2; j++) {
+            System.out.print("*");
+            
+        }
+        System.out.println();
+
+        for (int j = 1; j < (2*i)-1; j++) {
+            System.out.print(" ");
+            
+        }
+        
+    }
+   }
 
     
     
@@ -321,15 +341,15 @@ public class starsPattern {
     
     
     public static void main(String[] args) {
-        hollow_rectangle(5, 7);
-        InvertedAndRotatedHalfPyramid(5);
-        Inverted_Half_Pyramid_using_Numbers(5);
-        FLOYDs_Tringle(5);
-        Traingle_0_1(5);
-        Butterfly_Pattern(4);
-        Solid_Rhombus(5);
-        Hollow_Rhombus(5);
-        Diamond(4);
+        // hollow_rectangle(5, 7);
+        // InvertedAndRotatedHalfPyramid(5);
+        // Inverted_Half_Pyramid_using_Numbers(5);
+        // FLOYDs_Tringle(5);
+        // Traingle_0_1(5);
+        //Butterfly_Pattern(4);
+        // Solid_Rhombus(5);
+        //Hollow_Rhombus(5);
+        hollowDiamond(4);
 
         
     }
