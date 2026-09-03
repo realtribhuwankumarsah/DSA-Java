@@ -131,6 +131,27 @@ public class spiralMatrix {
     return false;
 }
 
+//optimal approach/ staircase approach
+public static boolean staircase (int matrix[][], int key) {
+    int row = 0, col = matrix[0].length-1;
+    while(row<matrix.length && col>=0) {
+        if(key==matrix[row][col]) {
+            System.out.println("Key found at index ("+row+","+col+")");
+            return true;
+        }
+        else {
+            if(key>matrix[row][col]) {
+                row++;
+            }
+            else {
+                col--;
+            }
+        }
+    }
+     System.out.println("key not found:");
+    return false;
+}
+
     
 
     public static void main(String[] args) {
@@ -144,7 +165,8 @@ public class spiralMatrix {
        //printSpiralMatrix(matrix); 
        //diagonalSum(matrix);
        //seachInmatrix(matrix, 35);
-       search(matrix, 48);
+       //search(matrix, 48);
+       staircase(matrix, 37);
 
 
     }
