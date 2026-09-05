@@ -17,26 +17,27 @@ public class Strings {
 
 
         //Concatenation
-        String firstname = "Tribhuwan";
-        String lastname = "Sah";
-        String fullname = firstname+" "+lastname;
-        System.out.println(fullname);
+        // String firstname = "Tribhuwan";
+        // String lastname = "Sah";
+        // String fullname = firstname+" "+lastname;
+        // System.out.println(fullname);
 
 
         //charAt / Character index
-        String name3 = "Manisha";
-        System.out.println(name3.charAt(5)); 
-        System.out.println();
-        System.out.println();
+        // String name3 = "Manisha";
+        // System.out.println(name3.charAt(5)); 
+        // System.out.println();
+        // System.out.println();
 
 
-        String Name = "Manisha";
-        printLetters(Name);
+        // String Name = "Manisha";
+        // printLetters(Name);
 
-        String word = "racecar";
-        Palindrome(word);
-        Palindrome1(word);
+        // String word = "madhu";
+        // Palindrome(word);
+        // System.out.println(Palindrome1(word));
 
+        System.out.println(Shortestpath("WNEENE"));
 
 
         
@@ -91,6 +92,44 @@ public class Strings {
                  System.out.println("The given String is a Palindrome.");
                     return true;
             }
+
+
+    
+    
+    //Shortest path problem
+    public static float Shortestpath(String dir) {
+        int x = 0;
+        int y = 0;
+
+        for (int i = 0; i <dir.length(); i++) {
+            // char d = dir.charAt(i);
+            
+            //south
+            if(dir.charAt(i)=='S') {
+                y--;
+            }
+            //north
+            else if(dir.charAt(i)=='N') {
+                y++;
+            }
+            //east
+            else if(dir.charAt(i)=='E') {
+                x++;
+            }
+            //west
+            else {
+                x--;
+            }
+
+        }
+        int xsq = x*x;
+        int ysq = y*y;
+        int sum = xsq+ysq;
+        float result = (float)Math.sqrt(sum);
+        return result;
+    
+
+    }
             
 
 
