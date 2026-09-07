@@ -1,19 +1,18 @@
 package Strings;
-import java.util.*;
 
 public class Strings {
     public static void main(String[] args) {
-        System.out.print("Enter your name :");
-        Scanner sc = new Scanner(System.in);
-        String name = sc.next(); //it inputs only a word
-        String name1 = sc.nextLine();//it inputs the whole sentence 
-        System.out.println(name);
-        System.out.println(name1);
+        // System.out.print("Enter your name :");
+        // Scanner sc = new Scanner(System.in);
+        // String name = sc.next(); //it inputs only a word
+        // String name1 = sc.nextLine();//it inputs the whole sentence 
+        // System.out.println(name);
+        // System.out.println(name1);
 
 
-        //String length
-        String name2 = "Tribhuwan kumar sah ";
-        System.out.println(name2.length());
+        // //String length
+        // String name2 = "Tribhuwan kumar sah ";
+        // System.out.println(name2.length());
 
 
         //Concatenation
@@ -37,7 +36,12 @@ public class Strings {
         // Palindrome(word);
         // System.out.println(Palindrome1(word));
 
-        System.out.println(Shortestpath("WNEENE"));
+        //System.out.println(Shortestpath("WNEENE"));
+        //stringComparison();
+        // System.out.println();
+        // subString();
+        largestString();
+
 
 
         
@@ -130,6 +134,65 @@ public class Strings {
     
 
     }
+
+
+    //String comparison
+    public static void stringComparison() {
+        String s1 = "tony";
+        String s2 = "tony"; // s2 is not created but it is pointing at s1's tony as both values are same.
+        String s3 = new String("tony");
+        if(s1==s2) {
+            System.out.println("both are equal."); //This will be executed.
+        }
+        else {
+            System.out.println("not equal.");
+        }
+        if(s1==s3) {
+            System.out.println("both are equal.");
+        }
+        else {
+            System.out.println("not equal.");//This will be executed.
+        }
+        //so to make s1 and s3 equal we use a method that is 
+        if(s1.equals(s3)) {
+            System.out.println("both are equal.");
+        }
+    }
+
+    //Substring
+    public static void subString() {
+        String str ="manisha";
+        String str1 = "";
+        //return sub string from index 0 to 4 (means up 0 to 3 and 4 is excluded)
+        for (int i = 0; i < 4; i++) {
+            str1+=str.charAt(i);
+
+            
+        }
+        //this same thing can be done using a method 
+        System.out.println(str.substring(0,4));
+        //return str1;
+    }
+
+    //Print largest String
+    public static void largestString() {
+        String str[] = {"apple","banana","mango"};
+        String largest = str[0];
+        for (int i = 0; i < str.length; i++) {
+           if(largest.compareToIgnoreCase(str[i])<0) {
+            largest=str[i];
+           }
+            
+        }
+        System.out.println(largest);
+    }
+
+
+    // //String compression 
+    // public static void compressString() {
+
+    // }
+
             
 
 
